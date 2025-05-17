@@ -1,4 +1,13 @@
 import { Link, Outlet } from "react-router-dom";
+import { supabase } from "../lib/supabaseClient";
+import { useNavigate } from "react-router-dom";
+
+const navigate = useNavigate();
+
+const handleLogout = async () => {
+  await supabase.auth.signOut();
+  navigate("/login");
+};
 
 export default function Layout() {
   return (
@@ -12,6 +21,13 @@ export default function Layout() {
           <Link to="/health" className="hover:text-purple-400">Health</Link>
           <Link to="/finance" className="hover:text-purple-400">Finance</Link>
           <Link to="/reflection" className="hover:text-purple-400">Reflection</Link>
+        <button
+  onClick={handleLogout}
+  className="mt-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
+>
+  Logout
+</button>
+
         </nav>
       </aside>
 
