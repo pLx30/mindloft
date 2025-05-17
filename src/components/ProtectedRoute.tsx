@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useSession } from "@supabase/auth-helpers-react"; // falls du das verwendest
-import React from "react"; // 👈 Das ist wichtig für JSX-Typen
+import { useSession, SessionContextProvider } from "@supabase/auth-helpers-react";
+import React from "react";
 
 type ProtectedRouteProps = {
   children: React.ReactNode;
