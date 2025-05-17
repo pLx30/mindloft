@@ -1,33 +1,21 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { supabase } from "../lib/supabaseClient";
+import { useSession } from "@supabase/auth-helpers-react"; // falls du das verwendest
+import React from "react"; // 👈 Das ist wichtig für JSX-Typen
 
-export default function ProtectedRoute({ children }: { children: JSX.Element }) {
-  const [loading, setLoading] = useState(true);
-  const [session, setSession] = useState<any>(null);
+type ProtectedRouteProps = {
+  children: React.ReactNode;
+};
+
+export default function ProtectedRoute({ children }: ProtectedRouteProps) {
+  const session = useSession(); // oder dein eigener Session-Hook
   const navigate = useNavigate();
 
   useEffect(() => {
-    supabase.auth.getSession().then(({ data }) => {
-      setSession(data.session);
-      setLoading(false);
+    if (!session) {
+      navigate("/login");
+    }
+  }, [session, navigate]);
 
-      if (!data.session) {
-        navigate("/");
-      }
-    });
-
-    const { data: listener } = supabase.auth.onAuthStateChange((_, session) => {
-      setSession(session);
-      if (!session) navigate("/");
-    });
-
-    return () => {
-      listener.subscription.unsubscribe();
-    };
-  }, []);
-
-  if (loading) return <div className="text-white p-8">Loading...</div>;
-
-  return children;
+  return <>{children}</>;
 }
