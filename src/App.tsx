@@ -1,3 +1,6 @@
+import { BrowserRouter } from "react-router-dom";
+import { SessionContextProvider } from "@supabase/auth-helpers-react";
+import { supabase } from "./lib/supabaseClient";
 import { Routes, Route } from 'react-router-dom';
 import Layout from './layout/Layout';
 import Home from './pages/Home';
@@ -6,14 +9,18 @@ import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 
 export default function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="login" element={<Login />} />
-        <Route path="register" element={<Register />} />
-        <Route path="dashboard" element={<Dashboard />} />
-      </Route>
-    </Routes>
-  );
+ return (
+  <SessionContextProvider supabaseClient={supabase}>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+          <Route path="dashboard" element={<Dashboard />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  </SessionContextProvider>
+);
 }
