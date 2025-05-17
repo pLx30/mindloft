@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { sendToGPT } from "../../lib/gpt/sendToGPT.ts";
+import { sendToGPT } from "../../lib/gpt/sendToGPT";
 
 export default function Habits() {
   const [input, setInput] = useState("");
