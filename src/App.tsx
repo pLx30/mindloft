@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Footer from "./components/Footer";
 
 import Habits from "./modules/habits/Habits";
 import Goals from "./modules/goals/Goals";
@@ -22,6 +23,15 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           {/* Öffentliche Routen */}
+           <Route
+            path="/"
+            element={
+              <>
+                <Home />
+                <Footer />
+              </>
+            }
+          />
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
