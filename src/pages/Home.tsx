@@ -50,6 +50,37 @@ export default function Home() {
     </div>
   </div>
 </section>
+<section className="py-20 bg-black text-white">
+  <div className="max-w-6xl mx-auto px-4">
+    <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
+      Sieh selbst, wie es funktioniert
+    </h2>
+    <div className="flex flex-col md:flex-row items-center gap-10">
+      {/* Vorschau / Screenshot-Box */}  
+      <div className="w-full md:w-1/2 rounded-xl overflow-hidden shadow-lg border border-zinc-800">
+        <div className="bg-zinc-800 text-left p-4">
+          <p className="text-zinc-300 text-sm mb-2">Beispiel: Tägliche Reflexion</p>
+          <div className="bg-black p-4 rounded-xl h-60 flex flex-col justify-between">
+            <p className="text-white text-lg italic mb-4">„Worauf bin ich heute stolz – und warum?“</p>
+            <div className="text-zinc-500 text-xs">GPT-Vorschlag: "Du hast heute deinen Fokus gehalten – super Arbeit."</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Beschreibung daneben */}
+      <div className="md:w-1/2">
+        <h3 className="text-2xl font-semibold mb-4">Tägliche Micro-Sessions</h3>
+        <p className="text-zinc-400 mb-4">
+          Die Module in Mindloft sind kurz, fokussiert und mit KI-Unterstützung gestaltet. Du bekommst gezielte
+          Reflexionsfragen und direktes Feedback, das dich weiterbringt – ohne Zeitverlust.
+        </p>
+        <p className="text-zinc-400">
+          So bleibt dein Kopf frei für das, was wirklich zählt. Jeder Tag bringt Wachstum.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
     </div>
     
     
