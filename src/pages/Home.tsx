@@ -7,7 +7,7 @@ import FeatureSection from "../components/FeatureSection";
 export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white">
-      <header className="flex items-center justify-between px-8 py-4 border-b border-gray-800">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-gray-800 flex justify-between items-center p-4">
         <h1 className="text-2xl font-bold text-cyan-400">Mindloft</h1>
         <nav className="flex items-center gap-6">
           <a href="#features" className="hover:text-cyan-400">Features</a>
