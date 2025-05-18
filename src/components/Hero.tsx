@@ -17,6 +17,42 @@ export default function Hero() {
           </a>
         </div>
       </div>
+      <section className="py-20 bg-zinc-950 text-white">
+  <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
+    So nutzt du Mindloft
+  </h2>
+  <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-6xl mx-auto px-4 text-center">
+    
+    {/* Schritt 1 */}
+    <div className="bg-zinc-900 p-6 rounded-2xl shadow-md">
+      <div className="text-purple-500 text-3xl mb-2">1️⃣</div>
+      <h3 className="text-xl font-semibold mb-2">Account erstellen</h3>
+      <p className="text-zinc-400">Registriere dich kostenlos und starte direkt mit deinem persönlichen Bereich.</p>
+    </div>
+
+    {/* Schritt 2 */}
+    <div className="bg-zinc-900 p-6 rounded-2xl shadow-md">
+      <div className="text-purple-500 text-3xl mb-2">2️⃣</div>
+      <h3 className="text-xl font-semibold mb-2">Ziele & Bereiche wählen</h3>
+      <p className="text-zinc-400">Definiere deine Ziele und aktiviere Module wie Gesundheit, Finanzen oder Reflexion.</p>
+    </div>
+
+    {/* Schritt 3 */}
+    <div className="bg-zinc-900 p-6 rounded-2xl shadow-md">
+      <div className="text-purple-500 text-3xl mb-2">3️⃣</div>
+      <h3 className="text-xl font-semibold mb-2">Täglich nutzen</h3>
+      <p className="text-zinc-400">Tracke deine Fortschritte, reflektiere deinen Tag und nutze KI-Feedback.</p>
+    </div>
+
+    {/* Schritt 4 */}
+    <div className="bg-zinc-900 p-6 rounded-2xl shadow-md">
+      <div className="text-purple-500 text-3xl mb-2">4️⃣</div>
+      <h3 className="text-xl font-semibold mb-2">Erfolge analysieren</h3>
+      <p className="text-zinc-400">Sieh deine Entwicklung mit visuellen Auswertungen und Berichten.</p>
+    </div>
+  </div>
+</section>
     </section>
+    
   );
 }
