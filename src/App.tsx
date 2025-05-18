@@ -22,12 +22,12 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           {/* Öffentliche Routen */}
+          <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
 
           {/* Geschützter Bereich mit Layout */}
           <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
             <Route path="dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
             <Route path="habits" element={<ProtectedRoute><Habits /></ProtectedRoute>} />
             <Route path="goals" element={<ProtectedRoute><Goals /></ProtectedRoute>} />
@@ -40,3 +40,4 @@ export default function App() {
     </SessionContextProvider>
   );
 }
+

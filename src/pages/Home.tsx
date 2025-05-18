@@ -1,27 +1,37 @@
+// src/pages/Home.tsx
+import { Link } from "react-router-dom";
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white px-6 py-20 flex flex-col items-center justify-center text-center">
-      <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-        Welcome to <span className="text-cyan-400">Mindloft</span>
-      </h1>
-      <p className="text-lg md:text-xl text-gray-300 max-w-2xl mb-10">
-        Your personal space for growth. Track your habits, set goals, manage health, handle finances and reflect. One place, powered by AI.
-      </p>
+    <div className="min-h-screen bg-black text-white">
+      <header className="flex items-center justify-between px-8 py-4 border-b border-gray-800">
+        <h1 className="text-2xl font-bold text-cyan-400">Mindloft</h1>
+        <nav className="flex items-center gap-6">
+          <a href="#features" className="hover:text-cyan-400">Features</a>
+          <a href="#about" className="hover:text-cyan-400">About</a>
+          <a href="#contact" className="hover:text-cyan-400">Contact</a>
+          <Link to="/login" className="px-4 py-2 bg-cyan-600 text-white rounded hover:bg-cyan-500">
+            Login
+          </Link>
+        </nav>
+      </header>
 
-      <div className="flex gap-4">
-        <a
-          href="/register"
-          className="px-6 py-3 bg-cyan-600 hover:bg-cyan-500 transition rounded-xl font-medium"
-        >
-          Get Started
-        </a>
-        <a
-          href="/login"
-          className="px-6 py-3 border border-gray-500 hover:border-white transition rounded-xl font-medium"
-        >
-          Login
-        </a>
-      </div>
-    </main>
+      <main className="flex flex-col items-center justify-center text-center py-32 px-4">
+        <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
+          Unlock Your Mind with <span className="text-cyan-400">Mindloft</span>
+        </h2>
+        <p className="text-lg md:text-xl text-gray-400 max-w-2xl mb-10">
+          Your personal AI space to track habits, goals, thoughts and growth. Organized. Focused. Private.
+        </p>
+        <div className="flex gap-4">
+          <Link to="/register" className="px-6 py-3 bg-purple-600 rounded text-white hover:bg-purple-500">
+            Get Started
+          </Link>
+          <a href="#features" className="px-6 py-3 border border-gray-600 rounded text-gray-300 hover:text-white hover:border-white">
+            Learn More
+          </a>
+        </div>
+      </main>
+    </div>
   );
 }
