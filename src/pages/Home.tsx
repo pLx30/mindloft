@@ -1,5 +1,8 @@
 // src/pages/Home.tsx
 import { Link } from "react-router-dom";
+import Hero from "../components/Hero";
+import FeatureSection from "../components/FeatureSection";
+
 
 export default function Home() {
   return (
@@ -16,7 +19,6 @@ export default function Home() {
           <Link to="/register" className="ml-4 px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700">Register</Link>
         </nav>
       </header>
-
       <main className="flex flex-col items-center justify-center text-center py-32 px-4">
         <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
           Unlock Your Mind with <span className="text-cyan-400">Mindloft</span>
@@ -24,6 +26,10 @@ export default function Home() {
         <p className="text-lg md:text-xl text-gray-400 max-w-2xl mb-10">
           Your personal AI space to track habits, goals, thoughts and growth. Organized. Focused. Private.
         </p>
+           <>
+      <Hero />
+      <FeatureSection />
+    </>
         <div className="flex gap-4">
           <Link to="/register" className="px-6 py-3 bg-purple-600 rounded text-white hover:bg-purple-500">
             Get Started
@@ -34,5 +40,6 @@ export default function Home() {
         </div>
       </main>
     </div>
+    
   );
 }
