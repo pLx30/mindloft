@@ -29,7 +29,7 @@ export default function App() {
 
           {/* Geschützter Bereich mit Layout */}
           <Route path="/" element={<Layout />}>
-            <Route path="dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+            <Route path="dashboard" element={<ProtectedRoute><Dashboard /><Footer /></ProtectedRoute>} />
             <Route path="habits" element={<ProtectedRoute><Habits /></ProtectedRoute>} />
             <Route path="goals" element={<ProtectedRoute><Goals /></ProtectedRoute>} />
             <Route path="finance" element={<ProtectedRoute><Finance /></ProtectedRoute>} />
