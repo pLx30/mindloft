@@ -23,18 +23,9 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           {/* Öffentliche Routen */}
-           <Route
-            path="/"
-            element={
-              <>
-                <Home />
-                <Footer />
-              </>
-            }
-          />
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/" element={<><Home /><Footer /></>} />
+          <Route path="/login" element={<><Login /><Footer /></>} />
+          <Route path="/register" element={<><Register /><Footer /></>} />
 
           {/* Geschützter Bereich mit Layout */}
           <Route path="/" element={<Layout />}>
