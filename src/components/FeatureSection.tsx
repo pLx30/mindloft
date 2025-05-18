@@ -31,16 +31,17 @@ export default function FeatureSection() {
               <div className="mb-4">{feature.icon}</div>
               <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
               <p className="text-zinc-400">{feature.description}</p>
-               <div className="flex gap-4 justify-center">
+              
+            </div>
+          ))}
+        </div>
+         <div className="flex gap-4 justify-center">
           <a href="/register" className="bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-xl text-white font-medium">
             Get Started
           </a>
           <a href="#features" className="border border-zinc-600 px-6 py-3 rounded-xl text-white font-medium">
             Learn More
           </a>
-        </div>
-            </div>
-          ))}
         </div>
       </div>
     </section>
